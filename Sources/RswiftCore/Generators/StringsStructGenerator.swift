@@ -218,7 +218,7 @@ struct StringsStructGenerator: ExternalOnlyStructGenerator {
     return Let(
       comments: values.comments,
       accessModifier: externalAccessLevel,
-      isStatic: true,
+      isStatic: false,
       name: SwiftIdentifier(name: values.key),
       typeDefinition: .inferred(Type.StringResource),
       value: "Rswift.StringResource(key: \"\(escapedKey)\", tableName: \"\(values.tableName)\", bundle: R.hostingBundle, locales: [\(locales)], comment: nil)"
@@ -240,7 +240,7 @@ struct StringsStructGenerator: ExternalOnlyStructGenerator {
       availables: [],
       comments: values.comments,
       accessModifier: externalAccessLevel,
-      isStatic: true,
+      isStatic: false,
       name: SwiftIdentifier(name: values.key),
       generics: nil,
       parameters: [
@@ -290,7 +290,7 @@ struct StringsStructGenerator: ExternalOnlyStructGenerator {
       availables: [],
       comments: values.comments,
       accessModifier: externalAccessLevel,
-      isStatic: true,
+      isStatic: false,
       name: SwiftIdentifier(name: values.key),
       generics: nil,
       parameters: params,
