@@ -78,7 +78,7 @@ struct Struct: UsedTypesProvider, SwiftCodeConverible {
       .joined(separator: "\n\n")
 
     // File private `init`, so that struct can't be initialized from the outside world
-    let fileprivateInit = "fileprivate init() {}"
+    let fileprivateInit = "public init() {}"
 
     let bodyComponents = [typealiasString, varsString, functionsString, structsString, classesString, fileprivateInit].filter { $0 != "" }
     let bodyString = bodyComponents.joined(separator: "\n\n").indent(with: "  ")
